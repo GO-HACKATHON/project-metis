@@ -5,6 +5,29 @@
  *
  * Made By MaterializeCSS.com
  */
+
+header, main, footer {
+      padding-left: 240px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+
+    @media only screen and (min-width: 993px) {
+   nav a.button-collapse {
+    display: block;
+   }
+ }
+
+.locationField {
+	transform-left: 10%;
+}
+.row{
+	margin: 0;
+}
 body {
 	height: 100%;
 width: 100%;
@@ -14,6 +37,12 @@ overflow-y: hidden;
 overflow: hidden;
 margin:0;
 }
+#map{
+	height: 100%;
+	margin-left: 20%;
+	background-color: red;
+}
+
 
 .icon-block {
   padding: 0 15px;
@@ -24,5 +53,6 @@ margin:0;
 
 .halfside {
 	background-color: black;
-	height: 100%;
+	height: 1000%;
+	position: fixed;;
 }
