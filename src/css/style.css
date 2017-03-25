@@ -38,6 +38,10 @@ overflow: hidden;
 margin:0;
 }
 
+.sidenav{
+	padding: 30px;
+}
+
 #map{
 	padding-top: -50px;
 }
@@ -49,7 +53,7 @@ margin:0;
 	font-size: inherit;
 }
 
-.halfside {
+.nav-wrapper {
 	background-color: black;
 	height: 1000%;
 	position: fixed;;

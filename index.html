@@ -25,27 +25,30 @@
   </ul>
   <ul id="slide-out" class="side-nav fixed">
       <!-- snippet:https://codepen.io/derekrliang/pen/GZBezL -->
-      <li class="no-padding"><div id="locationField">
+      <li ><div id="locationField">
       <input id="autocomplete" placeholder="Enter your departure address" onFocus="geolocate()" type="text"></input>
     </div></li>
-    <li class="no-padding"><div id="locationField">
+    <li ><div id="locationField">
       <input id="autocomplete" placeholder="Enter your destination address" onFocus="geolocate()" type="text"></input>
     </div></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect waves-teal">Dropdown<i class="mdi-navigation-arrow-drop-down"></i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="#!">First</a></li>
-                <li><a href="#!">Second</a></li>
-                <li><a href="#!">Third</a></li>
-                <li><a href="#!">Fourth</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
+    <li>
+        <label>Choose your vehicle type</label>
+    <div class="switch">
+    <label>
+      Motorcycle
+      <input type="checkbox">
+      <span class="lever"></span>
+      Car
+    </label>
+  </div></li>
+      
+        <div class="hiddenfield">
+              <div class="input-field col">
+                  <input id="platenum" type="text" length="7">
+                  <label for="platenum">Plate Number</label>
+                </div>
+      </div>
+      <li class="appendRoute"></li>
     </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons show-on-large">menu</i></a>
   </div>

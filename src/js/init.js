@@ -1,3 +1,4 @@
+$('.hiddenfield').hide();
 new google.maps.event.addDomListener( window, 'load', init );
 // Google Maps API copy & pasted below:
 // see https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
@@ -473,3 +474,4 @@ var mapProp= {
 };
 var map=new google.maps.Map(document.getElementById("map"),mapProp);
 }
+
