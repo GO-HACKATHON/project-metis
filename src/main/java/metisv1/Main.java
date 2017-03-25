@@ -1,4 +1,6 @@
 package metisv1;
+import java.util.Set;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -24,9 +26,17 @@ public class Main {
 		Spark.get("/path", new Route() {
 
 			public Object handle(Request arg0, Response arg1) throws Exception {
+				QueryParamsMap query = arg0.queryMap();
+				QueryParamsMap start = query.get("start");
+				String latlon = start.values()[0];
+
 				
-				arg1.type("application/json");
-				return GSON.toJson("{\nstatus: \"ok\", \ndata: " + ps.dijkstra() + "\n}");
+				QueryParamsMap end = query.get("end");
+				String latlon2 = end.values()[0];
+				
+				GoogleDirectionService gds = new GoogleDirectionService(latlon, latlon2);
+				
+				return GSON.toJson("A");
 			}
 			
 		});
