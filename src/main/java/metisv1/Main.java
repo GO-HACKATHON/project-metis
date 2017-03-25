@@ -35,8 +35,7 @@ public class Main {
 				String latlon2 = end.values()[0];
 				
 				GoogleDirectionService gds = new GoogleDirectionService(latlon, latlon2);
-				
-				return GSON.toJson("A");
+				return GSON.toJson(gds.request());
 			}
 			
 		});
