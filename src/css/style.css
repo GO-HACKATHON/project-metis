@@ -37,12 +37,10 @@ overflow-y: hidden;
 overflow: hidden;
 margin:0;
 }
-#map{
-	height: 100%;
-	margin-left: 20%;
-	background-color: red;
-}
 
+#map{
+	padding-top: -50px;
+}
 
 .icon-block {
   padding: 0 15px;

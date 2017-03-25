@@ -1,4 +1,4 @@
-google.maps.event.addDomListener( window, 'load', init );
+new google.maps.event.addDomListener( window, 'load', init );
 // Google Maps API copy & pasted below:
 // see https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
 
@@ -464,4 +464,12 @@ function init() {
 		} );
 		directionsDisplay.setMap( map );
 	}
+}
+
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("map"),mapProp);
 }
