@@ -63,7 +63,7 @@ This is simple instruction to get you running under 5 minutes to use the API
 - Postman App (or equivalent, suggested)
 
 ### Instruction
-- Clone this repo
+- Clone this [repo][repo]
 - Post request (using postman)
 ```
 localhost:4567/path?start=[String of starting point]&end=[String of ending point]&car=[true if car, false if motorcycle]
@@ -72,7 +72,7 @@ Example
 ```
 localhost:4567/path?start=Gedung+Arsip+Nasional&end=Teater+Jakarta&car=true
 ```
-- Open project-metis/index.html for front end interface as web app
+- Open [Project Metis on GitHub Pages][gpages] for front end interface as web app
 
 ## Built With
  - [Gradle][gradle] - Dependency Manager
@@ -92,6 +92,8 @@ This project is licensed under the MIT License - see the [LICENSE.md][licenselin
 - [SnazzyMaps][snazzy]
 - [Derek R Liang on codepen][codepen]
 
+[repo]: https://github.com/GO-HACKATHON/project-metis.git
+[gpages]: https://go-hackathon.github.io/project-metis/
 [codepen]: https://codepen.io/derekrliang/pen/GZBezL
 [snazzy]: https://snazzymaps.com
 [materialize]: https://materializecss.com
