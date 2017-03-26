@@ -1,30 +1,27 @@
 package metisv1;
 
 public class Edge  {
-    private final String id;
-    private final Vertex source;
-    private final Vertex destination;
-    private final int weight;
+    private Location source;
+    private Location destination;
+    private Distance distance;
+    private Duration duration;
 
-    public Edge(String id, Vertex source, Vertex destination, int weight) {
-            this.id = id;
+    public Edge(Location source, Location destination, Distance d, Duration du) {
             this.source = source;
             this.destination = destination;
-            this.weight = weight;
+            this.distance = d;
+            this.duration = du;
     }
 
-    public String getId() {
-            return id;
-    }
-    public Vertex getDestination() {
+    public Location getDestination() {
             return destination;
     }
 
-    public Vertex getSource() {
+    public Location getSource() {
             return source;
     }
     public int getWeight() {
-            return weight;
+            return this.duration.getValue() + this.distance.getValue();
     }
 
     @Override
