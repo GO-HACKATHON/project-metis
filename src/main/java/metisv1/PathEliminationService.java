@@ -81,14 +81,14 @@ public class PathEliminationService {
 				double[] j = f.getGeometry().getCoordinates()[0];
 				boolean intersect = isIntersect(iii,j);
 				if(intersect){
-					newRoutes.remove(i);
+					direction.getRoutes()[i] = null;
 					break;
 				}
 				
 				double[] k = f.getGeometry().getCoordinates()[1];
 				intersect = isIntersect(iii,k);
 				if(intersect){
-					newRoutes.remove(i);
+					direction.getRoutes()[i] = null;
 					break;
 				}
 				
@@ -103,12 +103,9 @@ public class PathEliminationService {
 	}
 	
 	public boolean isIntersect(Location i, double[] j){
-		System.out.println("i" + i.getLat() + " " + i.getLng());
-		System.out.println("j" + j[1] + " " + j[0]);
 		double dy = i.getLat() - j[1];
 		if(dy > 0.005 || dy < -0.005) return false;
 		double dx = (i.getLng() - j[0]);
-		System.out.println("dydx " + dx*dx + dy*dy);
 		return dx*dx + dy*dy < 2.5E-6;
 	}
 	
