@@ -90,7 +90,7 @@ $('#submitButton').click(function() {
 	}
 	
 	$.post("localhost:4567/path?",{start : "Gedung+Arsip+Nasional", end : "Teater+Jakarta", car : car, odd : platenum});
-}
+});
 
 (function($){
   $(function(){
