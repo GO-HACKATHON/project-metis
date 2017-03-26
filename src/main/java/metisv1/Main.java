@@ -28,17 +28,21 @@ public class Main {
 			public Object handle(Request arg0, Response arg1) throws Exception {
 				QueryParamsMap query = arg0.queryMap();
 				QueryParamsMap start = query.get("start");
-				String latlon = start.values()[0];
+				String latlon = start.value();
 
-				
 				QueryParamsMap end = query.get("end");
-				String latlon2 = end.values()[0];
+				String latlon2 = end.value();
 				
-				GoogleDirectionService gds = new GoogleDirectionService(latlon, latlon2);
+				QueryParamsMap odd = query.get("odd");
+				boolean isOdd = Boolean.parseBoolean(odd.value());
+				QueryParamsMap car = query.get("car");
+				boolean isCar = Boolean.parseBoolean(car.value());
+				GoogleDirectionService gds = new GoogleDirectionService(latlon, latlon2, isCar, isOdd);
 				return GSON.toJson(gds.request());
 			}
 			
 		});
+		
 	}
 
 }

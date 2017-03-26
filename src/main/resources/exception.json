@@ -1,8 +1,10 @@
-jend sudirman
-
 {
+"type": "FeatureCollection",
+"features": 
+[{
   "type": "Feature",
   "properties": {
+    "name": "Jl. Jend. Sudirman",
     "oddEven": {
 		"status" : "true",
 		"timeApplied" : [
@@ -80,10 +82,8 @@ jend sudirman
     ],
     "type": "LineString"
   }
-}
+},
 
-
-gatot subroto
 {
   "geometry": {
     "coordinates": [
@@ -284,6 +284,7 @@ gatot subroto
   },
   "type": "Feature",
   "properties": {
+  	"name": "Jl. Gatot Subroto",
     "oddEven": {
 		"status" : "true",
 		"timeApplied" : [
@@ -296,10 +297,8 @@ gatot subroto
 		]
 	}
   }
-}
+},
 
-
-sisingamangaraja
 {
   "geometry": {
     "coordinates": [
@@ -340,6 +339,7 @@ sisingamangaraja
   },
   "type": "Feature",
   "properties": {
+  	"name": "Jl. Sisingamangaraja",
     "oddEven": {
 		"status" : "true",
 		"timeApplied" : [
@@ -350,7 +350,7 @@ sisingamangaraja
 				16, 20
 			]
 		]
-	}
+	},
 	"carFreeDay" : {
 		"status" : "true",
 		"weekApplied" : 1,
@@ -361,12 +361,12 @@ sisingamangaraja
 		]
 	}
   }
-}
+},
 
-medan merdeka
 {
   "type": "Feature",
   "properties": {
+  	"name": "Jl. Medan Merdeka",
     "oddEven": {
 		"status" : "true",
 		"timeApplied" : [
@@ -447,12 +447,12 @@ medan merdeka
     ],
     "type": "LineString"
   }
-}
+},
 
-thamrin
 {
   "type": "Feature",
   "properties": {
+  	"name": "Jl. Thamrin",
     "oddEven": {
 		"status" : "true",
 		"timeApplied" : [
@@ -557,4 +557,5 @@ thamrin
     ],
     "type": "LineString"
   }
+}]
 }
