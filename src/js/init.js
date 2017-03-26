@@ -79,6 +79,18 @@ $('.button-collapse').sideNav({
         menuWidth: 350,
         closeOnClick: true
     });
+	
+$('#submitButton').click(function() {
+	var depart = $('#autocomplete-depart').val();
+	var destination = $('#autocomplete-desti').val();
+	var plateNum = $('#platenum').val();
+	var car = false;
+	if($("#car").prop('checked') == true){
+		car = true;
+	}
+	
+	$.post("localhost:4567/path?",{start : "Gedung+Arsip+Nasional", end : "Teater+Jakarta", car : car, odd : platenum});
+}
 
 (function($){
   $(function(){
@@ -474,4 +486,8 @@ var mapProp= {
 };
 var map=new google.maps.Map(document.getElementById("map"),mapProp);
 }
+
+
+
+
 

@@ -6,59 +6,60 @@
 <!--[if gt IE 9]><!-->
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
-  <title>Project Metis - NgikutAja</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="src/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="src/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+	<title>Project Metis - NgikutAja</title><!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="src/css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+	<link href="src/css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="map" style="width:100%;height:100vh;"></div>
-    <!-- <nav> -->
-    <div class="nav-wrapper">
-  <ul class="hide-on-med-and-down">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <ul id="slide-out" class="side-nav fixed">
-      <!-- snippet:https://codepen.io/derekrliang/pen/GZBezL -->
-      <li ><div id="locationField">
-      <input id="autocomplete" placeholder="Enter your departure address" onFocus="geolocate()" type="text"></input>
-    </div></li>
-    <li ><div id="locationField">
-      <input id="autocomplete" placeholder="Enter your destination address" onFocus="geolocate()" type="text"></input>
-    </div></li>
-    <li>
-        <label>Choose your vehicle type</label>
-    <div class="switch">
-    <label>
-      Motorcycle
-      <input type="checkbox">
-      <span class="lever"></span>
-      Car
-    </label>
-  </div></li>
-      
-        <div class="hiddenfield">
-              <div class="input-field col">
-                  <input id="platenum" type="text" length="7">
-                  <label for="platenum">Plate Number</label>
-                </div>
-      </div>
-      <li class="appendRoute"></li>
-    </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons show-on-large">menu</i></a>
-  </div>
-<!-- </nav> -->
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="src/js/materialize.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBArVDkYNbTrmmrAYCU5W7at-YD0wVHNG4&callback=myMap"></script>
-  <script src="src/js/init.js"></script>
-  </body>
+	<div id="map" style="width:100%;height:100vh;"></div><!-- <nav> -->
+	<div class="nav-wrapper">
+		<ul class="hide-on-med-and-down">
+			<li>
+				<a href="#!">First Sidebar Link</a>
+			</li>
+			<li>
+				<a href="#!">Second Sidebar Link</a>
+			</li>
+		</ul>
+		<ul class="side-nav fixed" id="slide-out">
+			<!-- snippet:https://codepen.io/derekrliang/pen/GZBezL -->
+			<li>
+				<div id="locationField">
+					<input id="autocomplete-depart" onfocus="geolocate()" placeholder="Enter your departure address" type="text">
+				</div>
+			</li>
+			<li>
+				<div id="locationField">
+					<input id="autocomplete-desti" onfocus="geolocate()" placeholder="Enter your destination address" type="text">
+				</div>
+			</li>
+			<li>
+				<label>Choose your vehicle type</label>
+				<div class="switch">
+					<label>Motorcycle <input id="car" type="checkbox"> <span class="lever"></span> Car</label>
+				</div>
+			</li>
+			<li style="list-style: none; display: inline">
+				<div class="hiddenfield">
+					<div class="input-field col">
+						<input id="platenum" type="text"> <label for="platenum">Plate Number</label>
+					</div>
+				</div>
+			</li>
+			<li class="appendRoute"></li>
+		</ul><a id="submitButton" class="button-collapse" data-activates="slide-out" href="#"><i class="material-icons show-on-large">menu</i></a>
+	</div><!-- </nav> -->
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js">
+	</script> 
+	<script src="src/js/materialize.js">
+	</script> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBArVDkYNbTrmmrAYCU5W7at-YD0wVHNG4&callback=myMap">
+	</script> 
+	<script src="src/js/init.js">
+	</script>
+</body>
 </html>
