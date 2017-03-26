@@ -60,8 +60,7 @@ public class PathEliminationService {
 		}
 		for(int i = 0; i < featureCollection.getFeatures().length; i++){
 			Feature f = featureCollection.getFeatures()[i];
-			System.out.println("another feature " + i + f.getProperties().getNoBike().isStatus());
-			if(f.getProperties().getNoBike().isStatus()){
+			if(f.getProperties().getNoBike() != null && f.getProperties().getNoBike().isStatus()){
 				System.out.println("find intersect");
 				List<GoogleRoute> routes = findIntersect(f);
 				direction.setRoutes(routes.toArray(new GoogleRoute[routes.size()]));
@@ -73,19 +72,26 @@ public class PathEliminationService {
 	public List<GoogleRoute> findIntersect(Feature f){
 
 		List<GoogleRoute> newRoutes = Arrays.asList(direction.getRoutes());
+		
+		
 		for(int i = 0; i < direction.getRoutes().length; i++){
 			loc.addAll(PolylineUtil.decode(direction.getRoutes()[i].getOverview_polyline().getPoints()));
 			for(int ii = 0; ii < loc.size(); ii++){
 				Location iii = loc.get(ii);
-				for(double[] j : f.getGeometry().getCoordinates()){
-					boolean intersect = isIntersect(iii,j);
-					System.out.println(i + " " + ii + " " + j[1] + " " + j[0]);
-					if(intersect){
-						System.out.println(i + "remove " + ii + " " + iii.getLat() + " " + iii.getLng());
-						newRoutes.remove(i);
-						break;
-					}
+				double[] j = f.getGeometry().getCoordinates()[0];
+				boolean intersect = isIntersect(iii,j);
+				if(intersect){
+					newRoutes.remove(i);
+					break;
 				}
+				
+				double[] k = f.getGeometry().getCoordinates()[1];
+				intersect = isIntersect(iii,k);
+				if(intersect){
+					newRoutes.remove(i);
+					break;
+				}
+				
 				
 			}
 			loc = new ArrayList<Location>();
@@ -103,7 +109,7 @@ public class PathEliminationService {
 		if(dy > 0.005 || dy < -0.005) return false;
 		double dx = (i.getLng() - j[0]);
 		System.out.println("dydx " + dx*dx + dy*dy);
-		return dx*dx + dy*dy < 1.6E-8;
+		return dx*dx + dy*dy < 2.5E-6;
 	}
 	
 	
