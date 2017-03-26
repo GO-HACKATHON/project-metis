@@ -72,7 +72,7 @@ Example
 ```
 localhost:4567/path?start=Gedung+Arsip+Nasional&end=Teater+Jakarta&car=true
 ```
-- Open [Project Metis on GitHub Pages][gpages] for front end interface as web app
+- Open localhost/project-metis/index.html for front end interface as web app
 
 ## Built With
  - [Gradle][gradle] - Dependency Manager
