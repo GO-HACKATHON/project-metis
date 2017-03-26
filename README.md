@@ -70,7 +70,7 @@ localhost:4567/path?start=[String of starting point]&end=[String of ending point
 ```
 Example
 ```
-localhost:4567/path?start=Gedung+Arsip+Nasional&end=Teater+Jakarta&car=true
+localhost:4567/path?start=Gedung+Arsip+Nasional&end=Djakarta+Theater+XXI&car=true
 ```
 - Open localhost/project-metis/index.html for front end interface as web app
 
